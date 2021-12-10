@@ -1,0 +1,11 @@
+[worldserver]
+
+# The amount of gold given at specified levels
+Reward.Gold.Level.10 = 5
+Reward.Gold.Level.20 = 15
+Reward.Gold.Level.30 = 30
+Reward.Gold.Level.40 = 45
+Reward.Gold.Level.50 = 60
+Reward.Gold.Level.60 = 80
+Reward.Gold.Level.70 = 125
+Reward.Gold.Level.80 = 250
