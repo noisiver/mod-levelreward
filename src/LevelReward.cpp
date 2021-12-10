@@ -14,7 +14,7 @@ class LevelReward : public PlayerScript
 
             if (oldlevel < 10 && player->getLevel() == 10)
             {
-                level  = 10;
+                level = 10;
                 reward = sConfigMgr->GetOption<int32>("Reward.Gold.Level.10", 5);
             }
             else if (oldlevel < 20 && player->getLevel() == 20)
