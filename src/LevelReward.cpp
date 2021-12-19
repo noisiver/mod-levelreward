@@ -3,10 +3,12 @@
 #include "Player.h"
 #include "ScriptMgr.h"
 
-class LevelReward : public PlayerScript
+uint32 rewardLevel[8];
+
+class LevelRewardPlayer : public PlayerScript
 {
     public:
-        LevelReward() : PlayerScript("LevelReward") {}
+        LevelRewardPlayer() : PlayerScript("LevelRewardPlayer") {}
 
         void OnLevelChanged(Player* player, uint8 oldlevel) override
         {
@@ -15,42 +17,42 @@ class LevelReward : public PlayerScript
             if (oldlevel < 10 && player->getLevel() == 10)
             {
                 level  = 10;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.10", 5);
+                reward = rewardLevel[0];
             }
             else if (oldlevel < 20 && player->getLevel() == 20)
             {
                 level  = 20;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.20", 15);
+                reward = rewardLevel[1];
             }
             if (oldlevel < 30 && player->getLevel() == 30)
             {
                 level  = 30;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.30", 30);
+                reward = rewardLevel[2];
             }
             else if (oldlevel < 40 && player->getLevel() == 40)
             {
                 level  = 40;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.40", 45);
+                reward = rewardLevel[3];
             }
             else if (oldlevel < 50 && player->getLevel() == 50)
             {
                 level  = 50;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.50", 60);
+                reward = rewardLevel[4];
             }
             else if (oldlevel < 60 && player->getLevel() == 60)
             {
                 level  = 60;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.60", 80);
+                reward = rewardLevel[5];
             }
             else if (oldlevel < 70 && player->getLevel() == 70)
             {
                 level  = 70;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.70", 125);
+                reward = rewardLevel[6];
             }
             else if (oldlevel < 80 && player->getLevel() == 80)
             {
                 level  = 80;
-                reward = sConfigMgr->GetOption<int32>("LevelReward.Level.80", 250);
+                reward = rewardLevel[7];
             }
 
             if (level > 0 && reward > 0)
@@ -61,7 +63,26 @@ class LevelReward : public PlayerScript
         }
 };
 
+class LevelRewardWorld : WorldScript
+{
+    public:
+        LevelRewardWorld() : WorldScript("LevelRewardWorld") {}
+
+        void OnAfterConfigLoad(bool /*reload*/) override
+        {
+            rewardLevel[0] = sConfigMgr->GetOption<int32>("LevelReward.Level.10", 5);
+            rewardLevel[1] = sConfigMgr->GetOption<int32>("LevelReward.Level.20", 15);
+            rewardLevel[2] = sConfigMgr->GetOption<int32>("LevelReward.Level.30", 30);
+            rewardLevel[3] = sConfigMgr->GetOption<int32>("LevelReward.Level.40", 45);
+            rewardLevel[4] = sConfigMgr->GetOption<int32>("LevelReward.Level.50", 60);
+            rewardLevel[5] = sConfigMgr->GetOption<int32>("LevelReward.Level.60", 80);
+            rewardLevel[6] = sConfigMgr->GetOption<int32>("LevelReward.Level.70", 125);
+            rewardLevel[7] = sConfigMgr->GetOption<int32>("LevelReward.Level.80", 250);
+        }
+};
+
 void AddLevelRewardScripts()
 {
-    new LevelReward();
+    new LevelRewardPlayer();
+    new RewardLevelWorld();
 }
