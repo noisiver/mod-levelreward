@@ -84,5 +84,5 @@ class LevelRewardWorld : WorldScript
 void AddLevelRewardScripts()
 {
     new LevelRewardPlayer();
-    new RewardLevelWorld();
+    new LevelRewardWorld();
 }
