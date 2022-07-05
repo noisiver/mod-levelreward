@@ -1,11 +1,81 @@
 [worldserver]
 
-# The amount of gold given at specified levels
-LevelReward.Level.10 = 5
-LevelReward.Level.20 = 15
-LevelReward.Level.30 = 30
-LevelReward.Level.40 = 45
-LevelReward.Level.50 = 60
-LevelReward.Level.60 = 80
-LevelReward.Level.70 = 125
-LevelReward.Level.80 = 250
+##
+# The amount of gold to receive at level 10
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.10.Gold = 5
+
+# The entry of the item to send to the player when reaching level 10
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.10.Item = 0
+##
+
+##
+# The amount of gold to receive at level 20
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.20.Gold = 15
+
+# The entry of the item to send to the player when reaching level 20
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.20.Item = 0
+##
+
+##
+# The amount of gold to receive at level 30
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.30.Gold = 30
+
+# The entry of the item to send to the player when reaching level 30
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.30.Item = 0
+##
+
+##
+# The amount of gold to receive at level 40
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.40.Gold = 45
+
+# The entry of the item to send to the player when reaching level 40
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.40.Item = 0
+##
+
+##
+# The amount of gold to receive at level 50
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.50.Gold = 60
+
+# The entry of the item to send to the player when reaching level 50
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.50.Item = 0
+##
+
+##
+# The amount of gold to receive at level 60
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.60.Gold = 80
+
+# The entry of the item to send to the player when reaching level 60
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.60.Item = 0
+##
+
+##
+# The amount of gold to receive at level 70
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.70.Gold = 125
+
+# The entry of the item to send to the player when reaching level 70
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.70.Item = 0
+##
+
+##
+# The amount of gold to receive at level 80
+# Set to 0 to disable the gold reward for this level
+LevelReward.Level.80.Gold = 250
+
+# The entry of the item to send to the player when reaching level 80
+# Set to 0 to disable the item reward for this level
+LevelReward.Level.80.Item = 0
+##
