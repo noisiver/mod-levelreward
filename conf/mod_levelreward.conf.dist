@@ -11,6 +11,12 @@ LevelReward.Level.10.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 10
 LevelReward.Level.10.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 10
+LevelReward.Level.10.Mail.Subject = "Level 10"
+
+# The body or content text of the mail sent to the player when reaching level 10
+LevelReward.Level.10.Mail.Body = "Congratulations on reaching level 10! Take this reward, let it aid you in your travels."
 ##
 
 ##
@@ -24,6 +30,12 @@ LevelReward.Level.20.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 20
 LevelReward.Level.20.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 20
+LevelReward.Level.20.Mail.Subject = "Level 20"
+
+# The body or content text of the mail sent to the player when reaching level 20
+LevelReward.Level.20.Mail.Body = "Congratulations on reaching level 20! Take this reward, let it aid you in your travels."
 ##
 
 ##
@@ -37,6 +49,12 @@ LevelReward.Level.30.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 30
 LevelReward.Level.30.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 30
+LevelReward.Level.30.Mail.Subject = "Level 30"
+
+# The body or content text of the mail sent to the player when reaching level 30
+LevelReward.Level.30.Mail.Body = "Congratulations on reaching level 30! Take this reward, let it aid you in your travels."
 ##
 
 ##
@@ -50,6 +68,12 @@ LevelReward.Level.40.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 40
 LevelReward.Level.40.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 40
+LevelReward.Level.40.Mail.Subject = "Level 40"
+
+# The body or content text of the mail sent to the player when reaching level 40
+LevelReward.Level.40.Mail.Body = "Congratulations on reaching level 40! Take this reward, let it aid you in your travels."
 ##
 
 ##
@@ -63,6 +87,12 @@ LevelReward.Level.50.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 50
 LevelReward.Level.50.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 50
+LevelReward.Level.50.Mail.Subject = "Level 50"
+
+# The body or content text of the mail sent to the player when reaching level 50
+LevelReward.Level.50.Mail.Body = "Congratulations on reaching level 50! Take this reward, let it aid you in your travels."
 ##
 
 ##
@@ -76,6 +106,12 @@ LevelReward.Level.60.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 60
 LevelReward.Level.60.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 60
+LevelReward.Level.60.Mail.Subject = "Level 60"
+
+# The body or content text of the mail sent to the player when reaching level 60
+LevelReward.Level.60.Mail.Body = "Congratulations on reaching level 60! Take this reward, let it aid you in your travels."
 ##
 
 ##
@@ -89,6 +125,12 @@ LevelReward.Level.70.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 70
 LevelReward.Level.70.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 70
+LevelReward.Level.70.Mail.Subject = "Level 70"
+
+# The body or content text of the mail sent to the player when reaching level 70
+LevelReward.Level.70.Mail.Body = "Congratulations on reaching level 70! Take this reward, let it aid you in your travels."
 ##
 
 ##
@@ -102,4 +144,10 @@ LevelReward.Level.80.Item = 0
 
 # The amount of the item entered above to send to the player when reaching level 80
 LevelReward.Level.80.ItemCount = 1
+
+# The subject or title of the mail sent to the player when reaching level 80
+LevelReward.Level.80.Mail.Subject = "Level 80"
+
+# The body or content text of the mail sent to the player when reaching level 80
+LevelReward.Level.80.Mail.Body = "Congratulations on reaching level 80! Take this reward, let it aid you in your travels."
 ##
