@@ -1,6 +1,12 @@
 [worldserver]
 
 ##
+# The entry of the creature (from creature_template) that will send the mail
+# Setting it to 0 will send it from customer support instead
+# It will default to customer support if the creature template doesn't exist
+LevelReward.Mail.Creature = 0
+
+##
 # The amount of gold to receive at level 10
 # Set to 0 to disable the gold reward for this level
 LevelReward.Level.10.Gold = 5

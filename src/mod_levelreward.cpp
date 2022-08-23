@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "ScriptMgr.h"
 
+uint32 levelRewardCreatureEntry;
 uint32 levelRewardGold[8];
 uint32 levelRewardItem[8];
 uint32 levelRewardItemCount[8];
@@ -113,7 +114,13 @@ private:
             }
         }
 
-        mail->SendMailTo(trans, receiver ? receiver : MailReceiver(guid), MailSender(MAIL_NORMAL, 0, MAIL_STATIONERY_GM), MAIL_CHECK_MASK_RETURNED);
+        MailSender mailSender = MailSender(MAIL_NORMAL, 0, MAIL_STATIONERY_GM);
+
+        if (levelRewardCreatureEntry > 0)
+            if (sObjectMgr->GetCreatureTemplate(levelRewardCreatureEntry))
+                mailSender = MailSender(MAIL_CREATURE, levelRewardCreatureEntry, MAIL_STATIONERY_GM);
+
+        mail->SendMailTo(trans, receiver ? receiver : MailReceiver(guid), mailSender, MAIL_CHECK_MASK_RETURNED);
         delete mail;
         CharacterDatabase.CommitTransaction(trans);
     }
@@ -126,6 +133,8 @@ public:
 
     void OnAfterConfigLoad(bool /*reload*/) override
     {
+        levelRewardCreatureEntry = sConfigMgr->GetOption<uint32>("LevelReward.Mail.Creature", 0);
+
         // Level 10
         levelRewardGold[0] = sConfigMgr->GetOption<uint32>("LevelReward.Level.10.Gold", 5);
         levelRewardItem[0] = sConfigMgr->GetOption<uint32>("LevelReward.Level.10.Item", 0);
