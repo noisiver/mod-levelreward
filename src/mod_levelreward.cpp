@@ -76,33 +76,25 @@ public:
             itemCount = levelRewardItemCount[7];
         }
 
-        if (level > 0)
+        if (level > 0 && (gold > 0 || itemId > 0))
         {
-            if (gold > 0)
-            {
-                ChatHandler(player->GetSession()).PSendSysMessage("Congratulations on reaching level %i! Take this reward of %i gold, let it aid you in your travels.", level, gold);
-                player->ModifyMoney(gold * GOLD);
-            }
-
-            if (itemId > 0)
-            {
-                if (const ItemTemplate* item = sObjectMgr->GetItemTemplate(itemId))
-                {
-                    std::string sub = Acore::StringFormat("Level %i", level);
-                    std::string bod = Acore::StringFormat("Congratulations on reaching level %i! Take this reward, let it aid you in your travels.", level);
-                    SendMailTo(player, sub, bod, itemId, itemCount);
-                }
-            }
+            std::string sub = Acore::StringFormat("Level %i", level);
+            std::string bod = Acore::StringFormat("Congratulations on reaching level %i! Take this reward, let it aid you in your travels.", level);
+            SendMailTo(player, sub, bod, gold, itemId, itemCount);
         }
     }
 
 private:
-    void SendMailTo(Player* receiver, std::string subject, std::string body, uint32 itemId, uint32 itemCount)
+    void SendMailTo(Player* receiver, std::string subject, std::string body, uint32 gold, uint32 itemId, uint32 itemCount)
     {
         uint32 guid = receiver->GetGUID().GetCounter();
 
         CharacterDatabaseTransaction trans = CharacterDatabase.BeginTransaction();
         MailDraft* mail = new MailDraft(subject, body);
+
+        if (gold > 0)
+            mail->AddMoney(gold * GOLD);
+
         ItemTemplate const* pProto = sObjectMgr->GetItemTemplate(itemId);
         if (pProto)
         {
