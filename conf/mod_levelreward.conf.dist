@@ -1,159 +1,176 @@
 [worldserver]
 
-##
+#########################
 # The entry of the creature (from creature_template) that will send the mail
 # Setting it to 0 will send it from customer support instead
 # It will default to customer support if the creature template doesn't exist
 LevelReward.Mail.Creature = 0
+#########################
 
-##
-# The amount of gold to receive at level 10
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.10.Gold = 5
+#########################
+# The amount of money, in copper, to receive at level 10
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.10.Money = 10000
 
-# The entry of the item to send to the player when reaching level 10
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.10.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 10
-LevelReward.Level.10.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 10
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.10.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 10
 LevelReward.Level.10.Mail.Subject = "Level 10"
 
 # The body or content text of the mail sent to the player when reaching level 10
 LevelReward.Level.10.Mail.Body = "Congratulations on reaching level 10! Take this reward, let it aid you in your travels."
-##
+#########################
 
-##
-# The amount of gold to receive at level 20
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.20.Gold = 15
+#########################
+# The amount of money, in copper, to receive at level 20
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.20.Money = 50000
 
-# The entry of the item to send to the player when reaching level 20
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.20.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 20
-LevelReward.Level.20.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 20
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.20.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 20
 LevelReward.Level.20.Mail.Subject = "Level 20"
 
 # The body or content text of the mail sent to the player when reaching level 20
 LevelReward.Level.20.Mail.Body = "Congratulations on reaching level 20! Take this reward, let it aid you in your travels."
-##
+#########################
 
-##
-# The amount of gold to receive at level 30
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.30.Gold = 30
+#########################
+# The amount of money, in copper, to receive at level 30
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.30.Money = 150000
 
-# The entry of the item to send to the player when reaching level 30
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.30.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 30
-LevelReward.Level.30.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 30
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.30.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 30
 LevelReward.Level.30.Mail.Subject = "Level 30"
 
 # The body or content text of the mail sent to the player when reaching level 30
 LevelReward.Level.30.Mail.Body = "Congratulations on reaching level 30! Take this reward, let it aid you in your travels."
-##
+#########################
 
-##
-# The amount of gold to receive at level 40
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.40.Gold = 45
+#########################
+# The amount of money, in copper, to receive at level 40
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.40.Money = 300000
 
-# The entry of the item to send to the player when reaching level 40
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.40.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 40
-LevelReward.Level.40.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 40
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.40.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 40
 LevelReward.Level.40.Mail.Subject = "Level 40"
 
 # The body or content text of the mail sent to the player when reaching level 40
 LevelReward.Level.40.Mail.Body = "Congratulations on reaching level 40! Take this reward, let it aid you in your travels."
-##
+#########################
 
-##
-# The amount of gold to receive at level 50
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.50.Gold = 60
+#########################
+# The amount of money, in copper, to receive at level 50
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.50.Money = 500000
 
-# The entry of the item to send to the player when reaching level 50
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.50.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 50
-LevelReward.Level.50.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 50
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.50.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 50
 LevelReward.Level.50.Mail.Subject = "Level 50"
 
 # The body or content text of the mail sent to the player when reaching level 50
 LevelReward.Level.50.Mail.Body = "Congratulations on reaching level 50! Take this reward, let it aid you in your travels."
-##
+#########################
 
-##
-# The amount of gold to receive at level 60
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.60.Gold = 80
+#########################
+# The amount of money, in copper, to receive at level 60
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.60.Money = 750000
 
-# The entry of the item to send to the player when reaching level 60
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.60.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 60
-LevelReward.Level.60.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 60
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.60.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 60
 LevelReward.Level.60.Mail.Subject = "Level 60"
 
 # The body or content text of the mail sent to the player when reaching level 60
 LevelReward.Level.60.Mail.Body = "Congratulations on reaching level 60! Take this reward, let it aid you in your travels."
-##
+#########################
 
-##
-# The amount of gold to receive at level 70
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.70.Gold = 125
+#########################
+# The amount of money, in copper, to receive at level 70
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.70.Money = 1250000
 
-# The entry of the item to send to the player when reaching level 70
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.70.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 70
-LevelReward.Level.70.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 70
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.70.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 70
 LevelReward.Level.70.Mail.Subject = "Level 70"
 
 # The body or content text of the mail sent to the player when reaching level 70
 LevelReward.Level.70.Mail.Body = "Congratulations on reaching level 70! Take this reward, let it aid you in your travels."
-##
+#########################
 
-##
-# The amount of gold to receive at level 80
-# Set to 0 to disable the gold reward for this level
-LevelReward.Level.80.Gold = 250
+#########################
+# The amount of money, in copper, to receive at level 80
+# Set to 0 to disable the money reward for this level
+# 100 copper = 1 silver, 10000 copper = 1 gold
+LevelReward.Level.80.Money = 2500000
 
-# The entry of the item to send to the player when reaching level 80
-# Set to 0 to disable the item reward for this level
-LevelReward.Level.80.Item = 0
-
-# The amount of the item entered above to send to the player when reaching level 80
-LevelReward.Level.80.ItemCount = 1
+# The entry of the items and the amount of those items to send to the player when reaching level 80
+# Leave empty to not send any items
+# The items have to be delimited by a semicolon and the amount has to be delimited from the item id with a comma
+# Example: "3530,4;14529,2;4238,1"
+# This will send 4 of item entry 3530, 2 of item entry 14529 and 1 of item entry 4238 to the player
+# Items that are not stackable needs to be entered multiple times if more than one is to be sent
+LevelReward.Level.80.Items = ""
 
 # The subject or title of the mail sent to the player when reaching level 80
 LevelReward.Level.80.Mail.Subject = "Level 80"
 
 # The body or content text of the mail sent to the player when reaching level 80
 LevelReward.Level.80.Mail.Body = "Congratulations on reaching level 80! Take this reward, let it aid you in your travels."
-##
+#########################
