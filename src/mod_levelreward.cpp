@@ -102,13 +102,13 @@ private:
             if (list.size() != 2)
                 continue;
 
-            uint32 item = Acore::StringTo<uint32>(list[0]).value_or(0);
-            uint32 amount = Acore::StringTo<uint32>(list[1]).value_or(0);
+            uint32 entry = Acore::StringTo<uint32>(list[0]).value_or(0);
+            uint32 count = Acore::StringTo<uint32>(list[1]).value_or(0);
 
             levelRewardItems.push_back(LevelRewardItems());
             levelRewardItems[i].level = level;
-            levelRewardItems[i].entry = item;
-            levelRewardItems[i].count = amount;
+            levelRewardItems[i].entry = entry;
+            levelRewardItems[i].count = count;
 
             i++;
         }
