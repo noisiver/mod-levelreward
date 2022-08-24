@@ -23,7 +23,7 @@ class LevelReward : public PlayerScript
 public:
     LevelReward() : PlayerScript("LevelReward") {}
 
-    void OnLevelChanged(Player* player, uint8 oldlevel) override
+    void OnLevelChanged(Player* player, uint8 /*oldlevel*/) override
     {
         if (player->getLevel() % 10 != 0 || player->getLevel() > 80)
             return;
