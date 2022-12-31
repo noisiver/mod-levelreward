@@ -25,7 +25,7 @@ public:
 
     void OnLevelChanged(Player* player, uint8 /*oldlevel*/) override
     {
-        if (player->getLevel() % 10 != 0 || player->getLevel() > 80)
+        if (player->GetLevel() % 10 != 0 || player->GetLevel() > 80)
             return;
 
         SendMailTo(player);
@@ -35,7 +35,7 @@ private:
     void SendMailTo(Player* receiver)
     {
         uint32 guid = receiver->GetGUID().GetCounter();
-        uint32 level = receiver->getLevel();
+        uint32 level = receiver->GetLevel();
         uint8 index = (level / 10) - 1;
 
         CharacterDatabaseTransaction trans = CharacterDatabase.BeginTransaction();
